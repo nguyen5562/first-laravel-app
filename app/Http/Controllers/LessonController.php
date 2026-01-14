@@ -9,7 +9,7 @@ class LessonController extends Controller
 {
     public function index()
     {
-        $lessons = Lesson::all();
+        $lessons = Lesson::paginate(2);
         return view('lessons.index', compact('lessons'));
     }
 
